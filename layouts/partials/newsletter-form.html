@@ -1,0 +1,55 @@
+<div class="newsletter-box">
+  <h2>订阅我的Newsletter</h2>
+  <p>每周一篇跨境文化洞察，直接送达你的邮箱。不会丢失，随时可退订。</p>
+  <form
+    action="https://buttondown.com/api/emails/embed-subscribe/linsw1216"
+    method="post"
+    target="popupwindow"
+    onsubmit="window.open('https://buttondown.com/linsw1216', 'popupwindow')"
+    class="embeddable-buttondown-form"
+  >
+    <div class="newsletter-fields">
+      <input type="email" name="email" id="bd-email" placeholder="你的邮箱地址" required />
+      <input type="hidden" value="1" name="embed" />
+      <input type="submit" value="订阅" />
+    </div>
+  </form>
+</div>
+
+<style>
+.newsletter-box {
+  max-width: 600px;
+  margin: 2em auto;
+  padding: 2em;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  text-align: center;
+  background: var(--code-bg);
+}
+.newsletter-box h2 { margin-top: 0; }
+.newsletter-fields {
+  display: flex;
+  gap: 0.5em;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.newsletter-fields input[type="email"] {
+  padding: 0.6em 1em;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 1em;
+  min-width: 240px;
+  background: var(--theme);
+  color: var(--primary);
+}
+.newsletter-fields input[type="submit"] {
+  padding: 0.6em 1.5em;
+  border: none;
+  border-radius: 4px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  background: var(--primary);
+  color: var(--theme);
+}
+</style>

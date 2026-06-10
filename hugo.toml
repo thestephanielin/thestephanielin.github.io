@@ -1,0 +1,48 @@
+baseURL = 'https://your-domain.com/'
+locale = 'zh-cn'
+title = 'Stephanie Lin'
+theme = 'PaperMod'
+
+# 启用 emoji 和相对路径
+enableEmoji = true
+relativeURLs = true
+
+[params]
+  # 首页描述
+  description = "跨文化洞察写作"
+  author = "Stephanie Lin"
+
+  # PaperMod 默认主题模式
+  defaultTheme = 'auto'  # 自动跟随系统（亮/暗）
+
+  # 隐藏部分界面元素（按需开启）
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowToc = true
+
+  # 首页显示
+  [params.homeInfoParams]
+    Title = "Stephanie Lin"
+    Content = "世界很大，人这一生也可以活出不止一种版本。"
+
+  # 社交链接（按需添加）
+  [[params.socialIcons]]
+    name = "email"
+    url = "mailto:stephanielincoaching@gmail.com"
+
+[menu]
+  [[menu.main]]
+    name = "文章"
+    pageRef = "/posts"
+    weight = 10
+  [[menu.main]]
+    name = "关于"
+    pageRef = "/about"
+    weight = 20
+  [[menu.main]]
+    name = "订阅"
+    pageRef = "/subscribe"
+    weight = 30
