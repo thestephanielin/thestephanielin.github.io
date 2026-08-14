@@ -1,4 +1,4 @@
-baseURL = 'https://your-domain.com/'
+baseURL = 'https://stephanielinme.com/'
 locale = 'zh-cn'
 title = 'Stephanie Lin'
 theme = 'PaperMod'
@@ -6,6 +6,15 @@ theme = 'PaperMod'
 # 启用 emoji 和相对路径
 enableEmoji = true
 relativeURLs = true
+
+# SEO：生成 robots.txt，方便被搜索引擎抓取和收录
+enableRobotsTXT = true
+
+# 允许文章中嵌入 HTML（排版必须）
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
 
 [params]
   # 首页描述
