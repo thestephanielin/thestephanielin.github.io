@@ -25,6 +25,7 @@ enableRobotsTXT = true
 
   # PaperMod 默认主题模式
   defaultTheme = 'auto'  # 自动跟随系统（亮/暗）
+  disableThemeToggle = true  # 不显示手动切换按钮（月亮图标），保留自动跟随系统
 
   # 隐藏部分界面元素（按需开启）
   ShowReadingTime = true
