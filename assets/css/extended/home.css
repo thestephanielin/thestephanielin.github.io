@@ -1,0 +1,107 @@
+/* 首页 V1：作者主页 + 内容档案库 + Email入口
+   风格：大量白底、黑灰正文、克制强调色、大字号标题、宽裕留白 */
+
+.home-hero {
+  min-height: auto;
+  padding: calc(var(--gap) * 2) 0 calc(var(--gap) * 2.5) 0;
+  margin-bottom: calc(var(--gap) * 2);
+  border-bottom: 1px solid var(--border);
+}
+
+.home-hero .entry-header h1 {
+  font-size: 44px;
+  line-height: 1.25;
+  margin-bottom: 0.6rem;
+}
+
+.home-tagline {
+  font-size: 18px;
+  color: var(--primary);
+  margin: 0 0 0.9rem 0;
+}
+
+.home-positioning {
+  font-size: 16px;
+  color: var(--secondary);
+  max-width: 640px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.home-hero-cta {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+  margin-top: 1.2rem;
+}
+
+.home-hero-cta a {
+  font-size: 15px;
+  color: var(--primary);
+  border-bottom: 1px solid var(--primary);
+  padding-bottom: 2px;
+}
+
+.home-hero-cta a:hover {
+  color: var(--secondary);
+  border-color: var(--secondary);
+}
+
+.home-hero-cta-sep {
+  color: var(--secondary);
+}
+
+.home-section {
+  margin: calc(var(--gap) * 2.5) 0;
+}
+
+.home-section-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: var(--gap);
+  color: var(--primary);
+}
+
+.home-view-all {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 15px;
+  color: var(--secondary);
+}
+
+.home-view-all:hover {
+  color: var(--primary);
+}
+
+.home-about-body {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.home-about-photo {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.home-about-body p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.85;
+  color: var(--content);
+}
+
+@media screen and (max-width: 480px) {
+  .home-hero .entry-header h1 {
+    font-size: 32px;
+  }
+
+  .home-about-body {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.9rem;
+  }
+}

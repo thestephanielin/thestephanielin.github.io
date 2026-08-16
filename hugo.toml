@@ -1,7 +1,9 @@
 baseURL = 'https://stephanielinme.com/'
+defaultContentLanguage = 'zh-cn'
 locale = 'zh-cn'
 title = 'Stephanie Lin'
 theme = 'PaperMod'
+copyright = '© 2026 Stephanie Lin'
 
 # 启用 emoji 和相对路径
 enableEmoji = true
@@ -17,8 +19,8 @@ enableRobotsTXT = true
       unsafe = true
 
 [params]
-  # 首页描述
-  description = "跨文化洞察写作"
+  # 站点默认描述（用于非首页页面的meta description兜底、OG等）
+  description = "写给35+、有国际视野的职场人。关于职业转型、精力管理、跨国迁移与更有选择权的工作和生活。"
   author = "Stephanie Lin"
 
   # PaperMod 默认主题模式
@@ -32,15 +34,10 @@ enableRobotsTXT = true
   ShowCodeCopyButtons = true
   ShowToc = true
 
-  # 首页显示
-  [params.homeInfoParams]
-    Title = "Stephanie Lin"
-    Content = "世界很大，人这一生也可以活出不止一种版本。"
-
   # 社交链接（按需添加）
   [[params.socialIcons]]
     name = "email"
-    url = "mailto:stephanielincoaching@gmail.com"
+    url = "mailto:stephanie@stephanielinme.com"
 
 [menu]
   [[menu.main]]

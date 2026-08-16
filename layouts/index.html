@@ -1,0 +1,62 @@
+{{- define "main" }}
+
+<article class="first-entry home-info home-hero">
+  <header class="entry-header">
+    <h1>{{ site.Title }}</h1>
+  </header>
+  <div class="entry-content md-content">
+    <p class="home-tagline">{{ .Params.tagline }}</p>
+    {{- with .Params.positioning }}
+    <p class="home-positioning">{{ . }}</p>
+    {{- end }}
+  </div>
+  <footer class="entry-footer">
+    <nav class="home-hero-cta">
+      <a href="{{ "posts/" | absLangURL }}">阅读文章</a>
+      <span class="home-hero-cta-sep">·</span>
+      <a href="#newsletter">订阅更新</a>
+    </nav>
+  </footer>
+</article>
+
+{{- $posts := where site.RegularPages "Section" "posts" }}
+{{- $posts = $posts.ByDate.Reverse }}
+{{- with $posts }}
+<section class="home-section" id="essays">
+  <h2 class="home-section-title">最新文章</h2>
+  {{- range first 6 . }}
+  <article class="post-entry">
+    <header class="entry-header">
+      <h3 class="entry-hint-parent">
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+      </h3>
+    </header>
+    {{- if (ne (.Param "hideSummary") true) }}
+    <div class="entry-content">
+      <p>{{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify | htmlUnescape | truncate 100 }}{{ end }}</p>
+    </div>
+    {{- end }}
+    <footer class="entry-footer">
+      <span class="post-date">{{ .Date.Format "2006-01-02" }}</span>
+    </footer>
+  </article>
+  {{- end }}
+  <a class="home-view-all" href="{{ "posts/" | absLangURL }}">查看全部文章 →</a>
+</section>
+{{- end }}
+
+<section class="home-section home-about" id="about">
+  <h2 class="home-section-title">{{ .Params.aboutTitle | default "About Stephanie" }}</h2>
+  <div class="home-about-body">
+    {{- with .Params.aboutPhoto }}
+    <img class="home-about-photo" src="{{ . | absURL }}" alt="Stephanie Lin" loading="lazy">
+    {{- end }}
+    <p>{{ .Params.about }}</p>
+  </div>
+</section>
+
+<section class="home-section home-newsletter" id="newsletter">
+  {{ partial "newsletter-form.html" . }}
+</section>
+
+{{- end }}{{/* end main */}}
