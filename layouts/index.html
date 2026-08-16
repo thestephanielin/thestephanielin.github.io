@@ -56,7 +56,7 @@
 </section>
 
 <section class="home-section home-newsletter" id="newsletter">
-  {{ partial "newsletter-form.html" . }}
+  {{ partial "newsletter-form.html" (dict "title" "把好文章直接发给你" "body" "我会不定期分享关于职业转型、精力管理、跨国生活与个人成长的长文。不追热点，只写值得留下来的东西。") }}
 </section>
 
 {{- end }}{{/* end main */}}

@@ -1,1 +1,3 @@
-{{ partial "newsletter-form.html" . }}
+{{ $title := .Params.newsletterTitle | default "把好文章直接发给你" }}
+{{ $body := .Params.newsletterBody | default "我会不定期分享关于职业转型、精力管理、跨国生活与个人成长的长文。不追热点，只写值得留下来的东西。" }}
+{{ partial "newsletter-form.html" (dict "title" $title "body" $body) }}

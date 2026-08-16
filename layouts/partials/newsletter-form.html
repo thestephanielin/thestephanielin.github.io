@@ -1,6 +1,6 @@
 <div class="newsletter-box">
-  <h2>把好文章直接发给你</h2>
-  <p>我会不定期分享关于职业转型、精力管理、跨国生活与个人成长的长文。不追热点，只写值得留下来的东西。</p>
+  <h2>{{ .title }}</h2>
+  <p>{{ .body | safeHTML }}</p>
   <form
     action="https://buttondown.com/api/emails/embed-subscribe/linsw1216"
     method="post"
