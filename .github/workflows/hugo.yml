@@ -4,6 +4,10 @@ on:
   push:
     branches: ["main"]
   workflow_dispatch:
+  schedule:
+    # 每周六 01:00 UTC = 09:00 吉隆坡时间，用于让当天日期的文章（date字段=当天）
+    # 从Hugo默认的"未来内容不构建"规则里自动解禁，无需当天手动push
+    - cron: "0 1 * * 6"
 
 permissions:
   contents: read
